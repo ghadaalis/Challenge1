@@ -9,13 +9,17 @@ import SwiftUI
 
 struct HomePage: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        ZStack {
+            Image("HomePage")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+            Text("أهلاً بك في")
+                .padding(.top,-300)
+                .foregroundStyle(.blue)
+                
+            
+        } .ignoresSafeArea()
+     
     }
 }
 
