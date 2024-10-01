@@ -19,7 +19,7 @@ struct HomePage: View {
                 
             
         } .ignoresSafeArea()
-     
+     //ghada
     }
 }
 
