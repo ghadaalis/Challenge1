@@ -16,7 +16,7 @@ struct HomePage: View {
             Text("أهلاً بك في")
                 .padding(.top,-300)
                 .foregroundColor(Color("line1HomePage"))
-              //  .font(custom("YourCustomFontName", size: 18))
+                .font(Font.custom("SF Arabic Rounded", size: 20))
                 
         } .ignoresSafeArea()
      //ghada
