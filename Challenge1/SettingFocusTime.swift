@@ -9,7 +9,18 @@ import SwiftUI
 
 struct SettingFocusTime: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Image("FocusTime")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+            
+        }.ignoresSafeArea()
+            
+    
+            
+                
+        
+    
     }
 }
 
