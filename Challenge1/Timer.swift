@@ -28,17 +28,20 @@ struct TimerView: View {
                 .padding()
 
                 Spacer()
-                
+                Spacer()
                 // Circular Timer
                 ZStack {
-                 /*   Circle()
-                        .foregroundColor(Color.white)
-                  */
                     Circle()
+                    
+                        .frame(width: 250.0, height: 250.0)
+                        .foregroundColor(Color("backgroundLight"))
+                     
+                    Circle()
+                        
                         .stroke(lineWidth: 10)
                         .opacity(0.3)
                         .foregroundColor(Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0)))
-                    
+                     
                        
                     
                     Circle()
@@ -47,6 +50,7 @@ struct TimerView: View {
                         .foregroundColor(Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0)))
                         .rotationEffect(Angle(degrees: 270.0))
                         .animation(.linear)
+                   
                     
                     Text(formatTime(seconds: timeRemaining))
                         .font(.largeTitle)
@@ -54,10 +58,16 @@ struct TimerView: View {
                 }
                 .frame(width: 200, height: 200)
                 
+                
+               
                 // Instruction text
+                Spacer()
                 Text("ركز لمدة ٢٥ دقيقة")
-                    .font(.title2)
+                    .bold()
+                    .font(.largeTitle)
                     .foregroundColor(Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0)))
+                  
+                    
                    
                 
                 Spacer()
@@ -72,6 +82,7 @@ struct TimerView: View {
                             .font(.largeTitle)
                             .foregroundColor(Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0)))
                     }
+                   
                     Spacer()
                     
                     // Pause/Play button
@@ -86,6 +97,7 @@ struct TimerView: View {
                             .font(.largeTitle)
                             .foregroundColor(Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0)))
                     }
+                    
                     Spacer()
                     
                     // Stop button
@@ -96,6 +108,7 @@ struct TimerView: View {
                             .font(.largeTitle)
                             .foregroundColor(Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0)))
                     }
+                  
                 }
                 .padding(.all, 100.0)
             }
