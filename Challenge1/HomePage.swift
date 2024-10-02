@@ -15,9 +15,9 @@ struct HomePage: View {
                 .aspectRatio(contentMode: .fill)
             Text("أهلاً بك في")
                 .padding(.top,-300)
-                .foregroundStyle(.blue)
+                .foregroundColor(Color("line1HomePage"))
+              //  .font(custom("YourCustomFontName", size: 18))
                 
-            
         } .ignoresSafeArea()
      //ghada
     }
