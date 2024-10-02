@@ -20,7 +20,9 @@ struct TimerView: View {
                     Button(action: {
                         // action for going back to the main page
                     }) {
-                        Text("الصفحة الرئيسية")
+                        
+                      
+                            Text("الصفحة الرئيسية")
                             .foregroundColor(Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0))) // adjust color
                     }
                     Spacer()
@@ -63,6 +65,7 @@ struct TimerView: View {
                 // Instruction text
                 Spacer()
                 Text("ركز لمدة ٢٥ دقيقة")
+                    .fontWeight(.bold)
                     .bold()
                     .font(.largeTitle)
                     .foregroundColor(Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0)))
@@ -80,7 +83,12 @@ struct TimerView: View {
                     }) {
                         Image(systemName: "arrow.counterclockwise")
                             .font(.largeTitle)
-                            .foregroundColor(Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0)))
+                            .bold()
+                            .foregroundColor(Color("backgroundLight"))
+                            .padding()
+                            .background{Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0))
+                            .clipShape(Circle())
+                            }
                     }
                    
                     Spacer()
@@ -95,7 +103,18 @@ struct TimerView: View {
                     }) {
                         Image(systemName: paused ? "play.fill" : "pause.fill")
                             .font(.largeTitle)
-                            .foregroundColor(Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0)))
+                            .bold()
+                            .foregroundColor(Color("backgroundLight"))
+                           // .padding()
+                            .frame(width: 60, height: 50)
+                            .padding()
+                            .background{Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0))
+                            .clipShape(Circle())
+                         
+                                
+                            }
+                         
+                            
                     }
                     
                     Spacer()
@@ -105,8 +124,14 @@ struct TimerView: View {
                         stopTimer()
                     }) {
                         Image(systemName: "stop.fill")
+                        
                             .font(.largeTitle)
-                            .foregroundColor(Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0)))
+                            .bold()
+                            .foregroundColor(Color("backgroundLight"))
+                            .padding()
+                            .background{Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0))
+                            .clipShape(Circle())
+                            }
                     }
                   
                 }
