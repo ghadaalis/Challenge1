@@ -27,7 +27,7 @@ struct ContentView: View {
             Spacer()
             Text("حدد عدد الإستراحات التي تحتاجها")
                 .font(.system(size: 20))
-                .foregroundColor(Color(red: 163/255, green: 105/255, blue: 55/255))
+                .foregroundColor(Color("line1HomePage"))
                 .padding(.top,20)
             
             Spacer()
@@ -49,10 +49,10 @@ struct ContentView: View {
                 }) {
                     Text("السابق")
                         .font(.system(size: 18))
-                        .foregroundColor(.white)
+                        .foregroundColor(Color("backgroundLight"))
                         .padding()
                         .frame(width:120,height:50)
-                        .background(Color.brown)
+                        .background(Color("buttonsColor"))
                         .cornerRadius(25)
                         .shadow(radius: 5)
                 }
@@ -62,10 +62,10 @@ struct ContentView: View {
                 }) {
                     Text("التالي")
                         .font(.system(size: 18))
-                        .foregroundColor(.white)
+                        .foregroundColor(Color("backgroundLight"))
                         .padding()
                         .frame(width:120,height:50)
-                        .background(Color.brown)
+                        .background(Color("buttonsColor"))
                         .cornerRadius(25)
                         .shadow(radius: 5)
                 }
@@ -75,8 +75,7 @@ struct ContentView: View {
             
             
         }
-        //بعدله لما غاده تعطينياسم اللون
-        .background(Color(red: 255/255, green: 243/255, blue: 233/255).edgesIgnoringSafeArea(.all))
+        .background(Color("backgroundLight").edgesIgnoringSafeArea(.all))
         
         .navigationBarHidden(true)    }
 }

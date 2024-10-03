@@ -25,7 +25,7 @@ struct BreakSelectionView: View {
                         Image(systemName: "chevron.left")
                         Text("الصفحة الرئيسية")
                     }
-                    .foregroundColor(Color("line1HomePage"))
+                    .foregroundColor(Color("buttonsColor"))
                 }
                 Spacer()
             }
@@ -77,10 +77,10 @@ struct BreakSelectionView: View {
                 }) {
                     Text("السابق")
                         .font(.system(size: 18))
-                        .foregroundColor(.white)
+                        .foregroundColor(Color("backgroundLight"))
                         .padding()
                         .frame(width:120,height:50)
-                        .background(Color.brown)
+                        .background(Color("buttonsColor"))
                         .cornerRadius(25)
                         .shadow(radius: 5)
                 }
@@ -90,10 +90,10 @@ struct BreakSelectionView: View {
                 }) {
                     Text("ابدأ")
                         .font(.system(size: 18))
-                        .foregroundColor(.white)
+                        .foregroundColor(Color("backgroundLight"))
                         .padding()
                         .frame(width:120,height:50)
-                        .background(Color.brown)
+                        .background(Color("buttonsColor"))
                         .cornerRadius(25)
                         .shadow(radius: 5)
                 }
@@ -103,7 +103,7 @@ struct BreakSelectionView: View {
         .padding(.bottom, 30)
         
         //بحذفه لما غاده تعطيني اللون
-        .background(Color(red: 255/255, green: 243/255, blue: 233/255).edgesIgnoringSafeArea(.all))
+        .background(Color("backgroundLight").edgesIgnoringSafeArea(.all))
         
         .navigationBarHidden(true) // Hide the navigation bar
     }

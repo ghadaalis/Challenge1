@@ -25,7 +25,7 @@ struct TimeSelectionView: View {
                         Image(systemName: "chevron.left")
                         Text("الصفحة الرئيسية")
                     }
-                    .foregroundColor(Color(red: 163/255, green: 105/255, blue: 55/255)) // Brown text color
+                    .foregroundColor(Color("buttonsColor")) // Brown text color
                 }
                 Spacer()
             }
@@ -36,7 +36,7 @@ struct TimeSelectionView: View {
             // Title for the time selection
             Text("حدد وقت التركيز لإتمام مهمتك")
                 .font(.title3)
-                .foregroundColor(Color(red: 163/255, green: 105/255, blue: 55/255)) // Brown text color
+                .foregroundColor(Color("line1HomePage")) // Brown text color
                 .padding()
 
             // Custom Picker
@@ -77,10 +77,10 @@ struct TimeSelectionView: View {
                 }) {
                     Text("الغاء")
                         .font(.system(size: 18))
-                        .foregroundColor(.white)
+                        .foregroundColor(Color("backgroundLight"))
                         .padding()
                         .frame(width:120,height:50)
-                        .background(Color.brown)
+                        .background(Color("buttonsColor"))
                         .cornerRadius(25)
                         .shadow(radius: 5)
                 }
@@ -90,10 +90,10 @@ struct TimeSelectionView: View {
                 }) {
                     Text("التالي")
                         .font(.system(size: 18))
-                        .foregroundColor(.white)
+                        .foregroundColor(Color("backgroundLight"))
                         .padding()
                         .frame(width:120,height:50)
-                        .background(Color.brown)
+                        .background(Color("buttonsColor"))
                         .cornerRadius(25)
                         .shadow(radius: 5)
                 }
@@ -102,8 +102,7 @@ struct TimeSelectionView: View {
         .padding(.horizontal, 20)
         .padding(.bottom, 30)
         
-        //بحذفه لما غاده تعطيني اللون
-        .background(Color(red: 255/255, green: 243/255, blue: 233/255).edgesIgnoringSafeArea(.all))
+        .background(Color("backgroundLight").edgesIgnoringSafeArea(.all))
         
         .navigationBarHidden(true) // Hide the navigation bar
     }
