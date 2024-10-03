@@ -45,13 +45,13 @@ struct EndPage: View {
                     .background(Color("buttonsColor"))
                     .cornerRadius(25)
                     .shadow(radius: 5)
-                    .offset(x: -60, y: 300)
+                    .offset(x: -50, y: 300)
             }
                 
                 Button(action: {
                     // Handle next action
                 }) {
-                    Text("إنهاء")
+                    Text("التالي")
                         .font(.system(size: 18))
                         .foregroundColor(Color("backgroundLight"))
                         .padding()
@@ -59,7 +59,7 @@ struct EndPage: View {
                         .background(Color("buttonsColor"))
                         .cornerRadius(25)
                         .shadow(radius: 5)
-                        .offset(x: 60, y: 300)
+                        .offset(x: 50, y: 300)
                 }
                 
                 

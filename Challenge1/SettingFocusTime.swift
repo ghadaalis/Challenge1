@@ -100,10 +100,10 @@ struct TimeSelectionView: View {
                 }
                 }
         }
-        .padding(.horizontal, 20)
-        .padding(.bottom, 30)
-        .padding(.bottom, 60)
-        .padding(.top, 60)
+          .padding(.horizontal, 20)
+          .padding(.bottom, 30)
+          .padding(.bottom, 60)
+          .padding(.top, 60)
         
         .background(Color("backgroundLight").edgesIgnoringSafeArea(.all))
         
