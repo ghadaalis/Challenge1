@@ -9,21 +9,16 @@ import SwiftUI
 
 struct EndPage: View {
     var body: some View {
-        ZStack {
-            Image("EndPage")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-        Text ("انظر الى مأنجزته خلال فترة التركيز!")
-                .font(.system(size:25))
-                .bold()
-                .padding()
-               
+        VStack {
+            Text ("انظر الى مأنجزته خلال فترة التركيز!")
+                        
+    }.ignoresSafeArea()
 
-        }.ignoresSafeArea()
-            
-    }
+}
 }
 
+
+
 #Preview {
-    EndPage()
+EndPage()
 }
