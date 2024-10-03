@@ -14,8 +14,6 @@ struct BreakSelectionView: View {
 
     var body: some View {
         VStack {
-            // Back button and title at the top
-            //HStack 1
             HStack {
                 Button(action: {
                     //  go back
@@ -26,9 +24,11 @@ struct BreakSelectionView: View {
                         Text("الصفحة الرئيسية")
                     }
                     .foregroundColor(Color("buttonsColor"))
+                    
                 }
                 Spacer()
             }
+
             .padding()
 
             Spacer()
@@ -36,6 +36,7 @@ struct BreakSelectionView: View {
             // Title for the time selection
             Text("حدد وقت استراحتك بين الجلسات")
                 .font(.title3)
+                .fontWeight(.bold)
                 .foregroundColor(Color("line1HomePage"))
                 .padding()
 
@@ -99,8 +100,10 @@ struct BreakSelectionView: View {
                 }
                 }
         }
-        .padding(.horizontal, 20)
-        .padding(.bottom, 30)
+        .padding(.horizontal, 30)
+        .padding(.bottom, 40)
+        .padding(.bottom, 60)
+        .padding(.top, 60)
         
         //بحذفه لما غاده تعطيني اللون
         .background(Color("backgroundLight").edgesIgnoringSafeArea(.all))

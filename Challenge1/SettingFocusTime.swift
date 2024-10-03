@@ -36,6 +36,7 @@ struct TimeSelectionView: View {
             // Title for the time selection
             Text("حدد وقت التركيز لإتمام مهمتك")
                 .font(.title3)
+                .fontWeight(.bold)
                 .foregroundColor(Color("line1HomePage")) // Brown text color
                 .padding()
 
@@ -101,6 +102,8 @@ struct TimeSelectionView: View {
         }
         .padding(.horizontal, 20)
         .padding(.bottom, 30)
+        .padding(.bottom, 60)
+        .padding(.top, 60)
         
         .background(Color("backgroundLight").edgesIgnoringSafeArea(.all))
         
