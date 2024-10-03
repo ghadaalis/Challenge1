@@ -33,7 +33,7 @@ struct ContentView: View {
             Spacer()
             
             Picker(selection: $selectedNumber, label: Text("")) {
-                ForEach(0..<101) { number in
+                ForEach(0..<6) { number in
                     Text("\(number)")
                         .tag(number)
                 }

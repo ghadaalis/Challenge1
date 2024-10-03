@@ -25,7 +25,7 @@ struct BreakSelectionView: View {
                         Image(systemName: "chevron.left")
                         Text("الصفحة الرئيسية")
                     }
-                    .foregroundColor(Color(red: 163/255, green: 105/255, blue: 55/255)) // Brown text color
+                    .foregroundColor(Color("line1HomePage"))
                 }
                 Spacer()
             }
@@ -36,7 +36,7 @@ struct BreakSelectionView: View {
             // Title for the time selection
             Text("حدد وقت استراحتك بين الجلسات")
                 .font(.title3)
-                .foregroundColor(Color(red: 163/255, green: 105/255, blue: 55/255)) // Brown text color
+                .foregroundColor(Color("line1HomePage"))
                 .padding()
 
             // Custom Picker
