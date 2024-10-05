@@ -6,7 +6,7 @@ struct ContentView1: View {
     @State private var selectedHour = 0
     @State private var selectedMinute = 0
     @State private var selectedSecond = 0
-
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -25,13 +25,13 @@ struct ContentView1: View {
                             })
                         }
                     }
-
+                
                 // Title for the time selection
                 Text("حدد وقت التركيز لإتمام مهمتك")
                     .font(.title3)
                     .foregroundColor(Color("line1HomePage")) // Brown text color
                     .padding()
-
+                
                 // Custom Picker
                 HStack(spacing: 20) {
                     // Hours Picker
@@ -42,7 +42,7 @@ struct ContentView1: View {
                     }
                     .pickerStyle(WheelPickerStyle())
                     .frame(width: 100, height: 100)
-
+                    
                     // Minutes Picker
                     Picker("Minutes", selection: $selectedMinute) {
                         ForEach(0..<60, id: \.self) { minute in
@@ -51,7 +51,7 @@ struct ContentView1: View {
                     }
                     .pickerStyle(WheelPickerStyle())
                     .frame(width: 100, height: 100)
-
+                    
                     // Seconds Picker
                     Picker("Seconds", selection: $selectedSecond) {
                         ForEach(0..<60, id: \.self) { second in
@@ -62,9 +62,9 @@ struct ContentView1: View {
                     .frame(width: 100, height: 100)
                 }
                 .navigationBarBackButtonHidden(true)
-
+                
                 Spacer()
-
+                
                 // Buttons with Navigation Links
                 HStack {
                     // Cancel button with NavigationLink to HomePage
@@ -82,9 +82,9 @@ struct ContentView1: View {
                                 .shadow(radius: 5)
                         }
                     }
-
+                    
                     Spacer()
-
+                    
                     // Next button with NavigationLink to ContentView2
                     Button(action: {
                         // Handle next action if needed
@@ -101,6 +101,7 @@ struct ContentView1: View {
                         }
                     }
                 }
+                
                 .padding(.horizontal, 30)
                 .padding(.bottom, 40)
                 .padding(.bottom, 60)
@@ -109,10 +110,15 @@ struct ContentView1: View {
             .background(Color("backgroundLight").edgesIgnoringSafeArea(.all))
         }.navigationBarBackButtonHidden(true)
     }
-}
+        
+       
+    }
+
 
 struct ContentView1_Previews: PreviewProvider {
     static var previews: some View {
         ContentView1()
     }
 }
+
+
