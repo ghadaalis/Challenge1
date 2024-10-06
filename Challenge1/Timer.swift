@@ -20,14 +20,13 @@ struct TimerView: View {
                     Button(action: {
                         // action for going back to the main page
                     }) {
-                        
-                      
                             Text("الصفحة الرئيسية")
-                            .foregroundColor(Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0))) // adjust color
+                            .foregroundColor(Color("buttonsColor"))
+                        
                     }
                     Spacer()
-                }
-                .padding()
+                }.padding(.horizontal,40)
+               // .padding()
 
                 Spacer()
                 Spacer()
@@ -42,7 +41,7 @@ struct TimerView: View {
                         
                         .stroke(lineWidth: 10)
                         .opacity(0.3)
-                        .foregroundColor(Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0)))
+                        .foregroundColor(Color("buttonsColor"))
                      
                        
                     
@@ -86,7 +85,7 @@ struct TimerView: View {
                             .bold()
                             .foregroundColor(Color("backgroundLight"))
                             .padding()
-                            .background{Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0))
+                            .background{Color("buttonsColor")
                             .clipShape(Circle())
                             }
                     }
@@ -105,10 +104,10 @@ struct TimerView: View {
                             .font(.largeTitle)
                             .bold()
                             .foregroundColor(Color("backgroundLight"))
-                           // .padding()
+                            //.padding()
                             .frame(width: 60, height: 50)
                             .padding()
-                            .background{Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0))
+                            .background{Color("buttonsColor")
                             .clipShape(Circle())
                          
                                 
@@ -129,7 +128,7 @@ struct TimerView: View {
                             .bold()
                             .foregroundColor(Color("backgroundLight"))
                             .padding()
-                            .background{Color(#colorLiteral(red: 0.8, green: 0.6, blue: 0.4, alpha: 1.0))
+                            .background{Color("buttonsColor")
                             .clipShape(Circle())
                             }
                     }
@@ -137,7 +136,7 @@ struct TimerView: View {
                 }
                 .padding(.all, 100.0)
             }
-            .padding()
+          //  .padding()
             .onAppear {
                 startTimer()
             }
