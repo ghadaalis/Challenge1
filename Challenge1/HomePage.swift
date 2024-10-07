@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomePage: View {
+    @State private var showSheet: Bool = false
     @Environment(\.dismiss) private var dismiss
     var body: some View {
         NavigationView {
@@ -34,7 +35,9 @@ struct HomePage: View {
                 }
                 
                 HStack {
-                    NavigationLink(destination: ContentView1()) {
+                    Button(action: {
+                        showSheet.toggle()
+                    }) {
                         Text("ابدأ")
                             .font(.system(size: 18))
                             .foregroundColor(Color("backgroundLight"))
@@ -43,6 +46,9 @@ struct HomePage: View {
                             .background(Color("buttonsColor"))
                             .cornerRadius(25)
                             .shadow(radius: 5)
+                    }
+                    .sheet(isPresented: $showSheet) {
+                        ContentView1(showSheet: $showSheet)
                     }
                 }
                 .offset(x: -100, y: 250)
