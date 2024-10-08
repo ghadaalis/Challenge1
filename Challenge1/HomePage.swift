@@ -41,7 +41,7 @@ struct HomePage: View {
                             .shadow(radius: 5)
                     }
                     .sheet(isPresented: $showSheet) {
-                        ContentView1(showSheet: $showSheet)
+                        ContentView1(showSheet: .constant(false), selectedHour: 0, selectedMinute: 0, selectedSecond: 0, selectedNumber: 0)
                     }
                 }
                 .offset(x: -100, y: 250)

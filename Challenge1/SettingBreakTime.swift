@@ -2,10 +2,14 @@ import SwiftUI
 // TimeSelectionView
 struct ContentView3: View {
     @Environment(\.dismiss) private var dismiss
-    @Binding var showSheet: Bool
-    @State private var selectedHour = 0
-    @State private var selectedMinute = 0
-    @State private var selectedSecond = 0
+    @State  var showSheet: Bool
+    @State  var selectedHourB: Int = 0
+    @State  var selectedMinuteB :Int = 0
+    @State  var selectedSecondB: Int = 0
+    @Binding  var selectedHour: Int
+    @Binding  var selectedMinute :Int
+    @Binding  var selectedSecond: Int
+    @Binding var selectedNumber: Int
 
     var body: some View {
         NavigationStack {
@@ -16,21 +20,21 @@ struct ContentView3: View {
                     .foregroundColor(Color("line1HomePage")) // Brown text color
                     .padding()
                 HStack(spacing: 20) {
-                    Picker("Hours", selection: $selectedHour) {
+                    Picker("Hours", selection: $selectedHourB) {
                         ForEach(0..<24, id: \.self) { hour in
                             Text("\(hour) hours").tag(hour)
                         }
                     }
                     .pickerStyle(WheelPickerStyle())
                     .frame(width: 100, height: 100)
-                    Picker("Minutes", selection: $selectedMinute) {
+                    Picker("Minutes", selection: $selectedMinuteB) {
                         ForEach(0..<60, id: \.self) { minute in
                             Text("\(minute) min").tag(minute)
                         }
                     }
                     .pickerStyle(WheelPickerStyle())
                     .frame(width: 100, height: 100)
-                    Picker("Seconds", selection: $selectedSecond) {
+                    Picker("Seconds", selection: $selectedSecondB) {
                         ForEach(0..<60, id: \.self) { second in
                             Text("\(second) sec").tag(second)
                         }
@@ -43,7 +47,8 @@ struct ContentView3: View {
                     Spacer()
                     Button(action: {
                     }) {
-                        NavigationLink(destination: TimerView()) {
+                        NavigationLink(destination: TimerView(selectedHour: $selectedHour, selectedMinute: $selectedMinute, selectedSecond: $selectedMinute, selectedHourB: $selectedHourB, selectedMinuteB: $selectedMinuteB, selectedSecondB: $selectedSecondB, numberOfBreaks: $selectedNumber)) {
+                            
                             Text("ابدأ")
                                 .font(.system(size: 18))
                                 .foregroundColor(Color("backgroundLight"))
@@ -87,8 +92,8 @@ struct ContentView3: View {
     }
 }
 
-struct ContentView3_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView3(showSheet: .constant(false))
-    }
-}
+//struct ContentView3_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView3(showSheet: .constant(false))
+//    }
+//}

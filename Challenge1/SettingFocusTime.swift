@@ -4,9 +4,10 @@ import SwiftUI
 struct ContentView1: View {
     @Binding var showSheet: Bool
     @Environment(\.dismiss) private var dismiss
-    @State private var selectedHour = 0
-    @State private var selectedMinute = 0
-    @State private var selectedSecond = 0
+    @State  var selectedHour: Int
+    @State var selectedMinute:Int
+    @State  var selectedSecond: Int
+    @State  var selectedNumber: Int
     
     var body: some View {
         NavigationStack {
@@ -44,10 +45,7 @@ struct ContentView1: View {
                 
                 HStack {
                     Spacer()
-                  //  Button(action: {
-                 //   }) {
-                    NavigationLink(destination: ContentView2(showSheet: $showSheet))
-                    {
+                    NavigationLink(destination: ContentView2(showSheet: $showSheet, selectedNumber: $selectedNumber, selectedHour: $selectedHour, selectedMinute: $selectedMinute, selectedSecond: $selectedSecond) ){
                         Text("التالي")
                             .font(.system(size: 18))
                             .foregroundColor(Color("backgroundLight"))
@@ -61,6 +59,7 @@ struct ContentView1: View {
                 }
                 .padding(.horizontal, 30)
                 .padding(.bottom, 60)
+
                 //.padding(.top, 60)
             }
             .toolbar {
@@ -83,7 +82,7 @@ struct ContentView1: View {
 // Preview for ContentView1
 struct ContentView1_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView1(showSheet: .constant(false))
+        ContentView1(showSheet: .constant(false), selectedHour: 0, selectedMinute: 0, selectedSecond: 0, selectedNumber: 25)
     }
 }
 

@@ -1,9 +1,17 @@
 import SwiftUI
+
+
+
 struct ContentView2: View {
     @Binding var showSheet: Bool
     @State private var isNavigating: Bool = false
     @Environment(\.dismiss) private var dismiss
-    @State private var selectedNumber: Int = 1
+    @Binding  var selectedNumber: Int
+    @Binding   var selectedHour:Int
+    @Binding   var selectedMinute: Int
+    @Binding   var selectedSecond: Int
+    
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -27,7 +35,8 @@ struct ContentView2: View {
                 
                 HStack {
                     Spacer()
-                    NavigationLink(destination: ContentView3(showSheet: $showSheet))
+                    NavigationLink(destination: ContentView3( showSheet: showSheet, selectedHour: $selectedHour, selectedMinute: $selectedMinute, selectedSecond: $selectedSecond, selectedNumber: $selectedNumber))
+                    
                     {
                         Text("التالي")
                             .font(.system(size: 18))
