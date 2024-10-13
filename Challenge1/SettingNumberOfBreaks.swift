@@ -16,7 +16,7 @@ struct ContentView2: View {
         NavigationStack {
             VStack {
                 Spacer()
-                Text("حدد عدد الإستراحات التي تحتاجها")
+                Text("حدد عدد الجولات التي تحتاجها")
                     .font(.system(size: 20))
                     .foregroundColor(Color("line1HomePage"))
                     .padding(.top, 20)
